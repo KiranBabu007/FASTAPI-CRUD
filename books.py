@@ -16,10 +16,11 @@ BOOKS = []
 
 
 @app.get("/")
-def read_api(name:str):
+def read_api():
     return BOOKS
 
 @app.post("/")
 def create_book(book:Book):
     BOOKS.append(book)
     return book
+
